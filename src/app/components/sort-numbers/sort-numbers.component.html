@@ -1,0 +1,13 @@
+
+<input type="text" label="List: " [(ngModel)]="numbers" />
+
+<div *ngFor="let orderType of availbleOrders">
+    <input type="radio" id={{orderType}} [(ngModel)]="order" value={{orderType}} >
+    <label for={{orderType}}>{{orderType}}</label>
+</div>
+
+<button (click)="sortNumbers()">sort</button>
+
+<div>
+    {{sortedNumbers}}
+</div>
